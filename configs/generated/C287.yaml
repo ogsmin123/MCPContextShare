@@ -1,0 +1,28 @@
+seed: 42
+results_dir: results
+run_id: C287
+workload:
+  type: BA
+  ops_per_sec: 10
+  read_ratio: 0.5
+access_pattern:
+  type: hotspot
+  hotspot_fraction: 0.05
+  hotspot_share: 0.5
+agents:
+  count: 25
+  group_mod: 5
+context:
+  size_tokens: 2000
+mcp:
+  strategy: PS
+  network_delay_ms: 5
+  ttl_seconds: 60
+  l1_capacity: 100
+  l2_capacity: 1000
+measurement:
+  init_seconds: 5
+  warmup_seconds: 10
+  measure_seconds: 60
+  cooldown_seconds: 10
+  log_interval_seconds: 1

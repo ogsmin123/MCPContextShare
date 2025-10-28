@@ -1,0 +1,27 @@
+seed: 42
+results_dir: results
+run_id: C272
+workload:
+  type: BU
+  ops_per_sec: 10
+  read_ratio: null
+access_pattern:
+  type: zipf
+  zipf_alpha: 0.99
+agents:
+  count: 25
+  group_mod: 5
+context:
+  size_tokens: 500
+mcp:
+  strategy: PS
+  network_delay_ms: 5
+  ttl_seconds: 60
+  l1_capacity: 100
+  l2_capacity: 1000
+measurement:
+  init_seconds: 5
+  warmup_seconds: 10
+  measure_seconds: 60
+  cooldown_seconds: 10
+  log_interval_seconds: 1

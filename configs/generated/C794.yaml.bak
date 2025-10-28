@@ -1,0 +1,26 @@
+seed: 42
+results_dir: results
+run_id: C794
+workload:
+  type: WH
+  ops_per_sec: 8
+  read_ratio: 0.3
+access_pattern:
+  type: uniform
+agents:
+  count: 25
+  group_mod: 5
+context:
+  size_tokens: 100
+mcp:
+  strategy: HA
+  network_delay_ms: 5
+  ttl_seconds: 60
+  l1_capacity: 100
+  l2_capacity: 1000
+measurement:
+  init_seconds: 5
+  warmup_seconds: 30
+  measure_seconds: 60
+  cooldown_seconds: 10
+  log_interval_seconds: 1
